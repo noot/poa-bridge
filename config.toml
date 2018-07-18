@@ -1,0 +1,28 @@
+keystore = "../chaindata2/keystore"
+
+[home]
+account = "0x8f9b540b19520f8259115a90e4b4ffaeac642a30"
+required_confirmations = 0
+rpc_host = "http://localhost"
+rpc_port = 8545 
+password = "password.txt"
+#default_gas_price = 1_000_000_000 # 1 GWEI
+
+[foreign]
+account = "0x8f9b540b19520f8259115a90e4b4ffaeac642a30"
+password="password.txt"
+required_confirmations = 0
+rpc_host = "http://localhost"
+rpc_port = 9545
+#gas_price_oracle_url = "https://gasprice.poa.network"
+#gas_price_speed = "instant"
+#default_gas_price = 10_000_000_000 # 10 GWEI
+
+[authorities]
+accounts = [ "0x43da9b1445bff7e15921d125c835bb43b4837709" ]
+required_signatures = 1
+
+[transactions]
+deposit_relay = { gas = 3000000, gas_price = 1000000000 }
+withdraw_relay = { gas = 3000000, gas_price = 1000000000 }
+withdraw_confirm = { gas = 3000000, gas_price = 1000000000 }

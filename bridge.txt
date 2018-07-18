@@ -1,0 +1,2 @@
+./target/release/bridge --config config.toml --database db.toml
+
