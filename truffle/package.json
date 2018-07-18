@@ -17,9 +17,17 @@
     "ganache-cli": "^6.0.3",
     "solidity-coverage": "^0.4.8",
     "solium": "^1.1.2",
-    "truffle": "^4.0.4"
+    "truffle": "^4.1.13"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bignumber": "^1.1.0",
+    "dotenv": "^6.0.0",
+    "ethereumjs-abi": "^0.6.5",
+    "openzeppelin-solidity": "^1.10.0",
+    "truffle-privatekey-provider": "^0.1.0",
+    "web3-utils": "^1.0.0-beta.34",
+    "websocket": "^1.0.26"
+  },
   "scripts": {
     "ci": "concurrently \"yarn run solium\" \"yarn run truffle-with-rpc\" \"yarn run solidity-coverage\"",
     "ganache": "ganache-cli --port 8547",
@@ -28,5 +36,11 @@
     "test": "yarn run truffle-with-rpc",
     "truffle": "truffle test",
     "truffle-with-rpc": "concurrently --success first --kill-others \"yarn run ganache\" \"yarn run truffle\""
-  }
+  },
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [],
+  "author": ""
 }
